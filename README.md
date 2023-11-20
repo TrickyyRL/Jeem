@@ -6,15 +6,16 @@
 
 ## How to install?
 ### 1. Click on the Code button and press "Download ZIP".
-### 2. Make sure you have Python and PIP.
-### 3. Do the following command
+### 2. Make sure to extract the ZIP file you installed
+### 3. Make sure you have Python and PIP.
+### 4. Go inside the file, then press this bar and type in the following command:
 ```
 pip install -r requirements.txt
 ```
-### 4. Put in your question images.
-### 5. Put in the images for the answers.
-### 6. Run the `main.py` file
-### 7. Enjoy
+### 5. Put in your question images.
+### 6. Put in the images for the answers.
+### 7. Run the `main.py` file
+### 8. Enjoy
 
 
 
