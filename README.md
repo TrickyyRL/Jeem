@@ -19,5 +19,7 @@ pip install -r requirements.txt
 
 
 ## FAQ
-## 1. *The script doesn't output a response, what do I do?*
-### In that case, just retake your images because maybe they aren't clear enough for the script to recognize the text in the images perfectly.
+
+### 1. *The script doesn't output a response, what do I do?*
+ In that case, just retake your images because maybe they aren't clear enough for the script to recognize the text in the images perfectly.
+
