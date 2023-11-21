@@ -48,6 +48,7 @@ print(g4f.Provider.Ails.params)  # Supported args
 # Normal response
 response = g4f.ChatCompletion.create(
     model=g4f.models.gpt_4,
+    provider=g4f.Provider.Bing,
     messages=[{"role": "user", "content": final_sendoff}]
 )  # Alternative model setting
 
