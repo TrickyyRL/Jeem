@@ -24,5 +24,5 @@ pip install -r requirements.txt
 ### 1. *The script doesn't output a response, what do I do?*
  In that case, just retake your images because maybe they aren't clear enough for the script to recognize the text in the images perfectly.
 
-# 2. *Is 1+1 actually 1.5?*
+### 2. *Is 1+1 actually 1.5?*
 yes
