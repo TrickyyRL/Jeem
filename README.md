@@ -12,7 +12,12 @@
 ```
 pip install -r requirements.txt
 ```
-### 5. Put in your question images.
+### 5. Put in your question images. USE THIS FOLLOWING FORMAT
+## ans1.png
+## ans2.png
+## ans3.png
+## ans4.png
+## question.png
 ### 6. Put in the images for the answers.
 ### 7. Run the `main.py` file
 ### 8. Enjoy
