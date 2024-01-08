@@ -39,7 +39,7 @@ yes
 Sure, it will be in the works. (i dont got much time on this project im too busy).
 
 ### 4. *OH NO THE SCRIPT IS REBELLING AGAINST ME WHAT DO I DO?!?!!?!*
-Try running the script again or retake your images).
+Try running the script again or retake your images.
 
 ### 5. *bro your stupid ass script got a question wrong (finally), why????*
 It doesn't happen that much, but this is an AI that's responding (specifically GPT-4), so it isn't perfect (no one is perfect anyways).
