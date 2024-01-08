@@ -10,55 +10,553 @@ from g4f.Provider import (
 
 #EasyOCR part
 
+
+
 #define the ocr language
-reader = easyocr.Reader(['ar']) # this needs to run only once to load the model into memory
+
+print("Please provide the language you want to use:")
+print("input - language")
+print("en - english")
+print("ar - arabic")
+readerask = input()
+reader = easyocr.Reader([readerask]) # this needs to run only once to load the model into memory
+
+
 
 #find and read the images
+
 result_question = reader.readtext('question.png', detail = 0)
-result_answer1 = reader.readtext('ans1.png', detail = 0)
-result_answer2 = reader.readtext('ans2.png', detail = 0)
-result_answer3 = reader.readtext('ans3.png', detail = 0)
-result_answer4 = reader.readtext('ans4.png', detail = 0)
+
+print("What kind of question is your question that you are trying to solve?")
+print("1 - Multiple Choice (4 Answers)")
+print("2 - Multiple Choice (5 Answers)")
+print("3 - Multiple Choice (6 Answers)")
+print("4 - Multiple Answers (4 Choices) (2 Answers)")
+print("5 - Multiple Answers (4 Choices) (3 Answers)")
+print("6 - Multiple Answers (5 Choices) (2 Answers)")
+print("7 - Multiple Answers (5 Choices) (3 Answers)")
+print("8 - Multiple Answers (6 Choices) (2 Answers)")
+print("9 - Multiple Answers (6 Choices) (3 Answers)")
+print("10 - Input Question")
+
+question_type = input()
+question_type = int(question_type)
+
+#1 - Four Choice Questions  DONE
+if question_type == 1:
+
+    result_answer1 = reader.readtext('ans1.png', detail = 0)
+    result_answer2 = reader.readtext('ans2.png', detail = 0)
+    result_answer3 = reader.readtext('ans3.png', detail = 0)
+    result_answer4 = reader.readtext('ans4.png', detail = 0)
 
 
-#join the stuff outputted together in a useable format
-variable_question = "\n".join(result_question)
-variable_ans1 = "\n".join(result_answer1)
-variable_ans2 = "\n".join(result_answer2)
-variable_ans3 = "\n".join(result_answer3)
-variable_ans4 = "\n".join(result_answer4)
+    #join the stuff outputted together in a useable format
+    variable_question = "\n".join(result_question)
+    variable_ans1 = "\n".join(result_answer1)
+    variable_ans2 = "\n".join(result_answer2)
+    variable_ans3 = "\n".join(result_answer3)
+    variable_ans4 = "\n".join(result_answer4)
 
-#make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
-prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, ONLY ANSWER WITH THE ACTUAL ANSWER PICKED AND NOTHING ELSE, you arent allowed to add any explanation or any additional words to the answer chosen by you, so you would only type the number of the answer and the answer next to it seperated by a colon. This is an example of how you should answer:", """ "Answer #: example answer """]
-prequestion = "\n".join(prequestion_list)
+    #make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
+    prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, ONLY ANSWER WITH THE ACTUAL ANSWER PICKED AND NOTHING ELSE, you arent allowed to add any explanation or any additional words to the answer chosen by you, so you would only type the number of the answer and the answer next to it seperated by a colon. This is an example of how you should answer:", """ "Answer #: example answer """]
+    prequestion = "\n".join(prequestion_list)
 
-#add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
-final_question_list = [prequestion, "Answer the following question: ", variable_question]
-final_question = "\n".join(final_question_list)
+    #add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
+    final_question_list = [prequestion, "Answer the following question: ", variable_question]
+    final_question = "\n".join(final_question_list)
 
-#do the same thing for the answers, but without the prequestion
-final_ans1_list = ["Answer 1: ", variable_ans1]
-final_ans1 = "\n".join(final_ans1_list)
-final_ans2_list = ["Answer 2: ", variable_ans2]
-final_ans2 = "\n".join(final_ans2_list)
-final_ans3_list = ["Answer 3: ", variable_ans3]
-final_ans3 = "\n".join(final_ans3_list)
-final_ans4_list = ["Answer 4: ", variable_ans4]
-final_ans4 = "\n".join(final_ans4_list)
-
-
-#debug step
-#print(final_question)
-#print(final_ans1)
-#print(final_ans2)
-#print(final_ans3)
-#print(final_ans4)
+    #do the same thing for the answers, but without the prequestion
+    final_ans1_list = ["Answer 1: ", variable_ans1]
+    final_ans1 = "\n".join(final_ans1_list)
+    final_ans2_list = ["Answer 2: ", variable_ans2]
+    final_ans2 = "\n".join(final_ans2_list)
+    final_ans3_list = ["Answer 3: ", variable_ans3]
+    final_ans3 = "\n".join(final_ans3_list)
+    final_ans4_list = ["Answer 4: ", variable_ans4]
+    final_ans4 = "\n".join(final_ans4_list)
 
 
-#this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
-final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4]
-final_sendoff = "\n".join(final_sendoff_list)
-print(final_sendoff)
+    #debug step
+    #print(final_question)
+    #print(final_ans1)
+    #print(final_ans2)
+    #print(final_ans3)
+    #print(final_ans4)
+
+
+    #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
+    final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4]
+    final_sendoff = "\n".join(final_sendoff_list)
+    print(final_sendoff)
+
+#2 - Five Choice Question   DONE
+elif question_type == 2:
+
+    result_answer1 = reader.readtext('ans1.png', detail = 0)
+    result_answer2 = reader.readtext('ans2.png', detail = 0)
+    result_answer3 = reader.readtext('ans3.png', detail = 0)
+    result_answer4 = reader.readtext('ans4.png', detail = 0)
+    result_answer5 = reader.readtext('ans5.png', detail = 0)
+
+
+    #join the stuff outputted together in a useable format
+    variable_question = "\n".join(result_question)
+    variable_ans1 = "\n".join(result_answer1)
+    variable_ans2 = "\n".join(result_answer2)
+    variable_ans3 = "\n".join(result_answer3)
+    variable_ans4 = "\n".join(result_answer4)
+    variable_ans5 = "\n".join(result_answer5)
+
+    #make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
+    prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, ONLY ANSWER WITH THE ACTUAL ANSWER PICKED AND NOTHING ELSE, you arent allowed to add any explanation or any additional words to the answer chosen by you, so you would only type the number of the answer and the answer next to it seperated by a colon. This is an example of how you should answer:", """ "Answer #: example answer """]
+    prequestion = "\n".join(prequestion_list)
+
+    #add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
+    final_question_list = [prequestion, "Answer the following question: ", variable_question]
+    final_question = "\n".join(final_question_list)
+
+    #do the same thing for the answers, but without the prequestion
+    final_ans1_list = ["Answer 1: ", variable_ans1]
+    final_ans1 = "\n".join(final_ans1_list)
+    final_ans2_list = ["Answer 2: ", variable_ans2]
+    final_ans2 = "\n".join(final_ans2_list)
+    final_ans3_list = ["Answer 3: ", variable_ans3]
+    final_ans3 = "\n".join(final_ans3_list)
+    final_ans4_list = ["Answer 4: ", variable_ans4]
+    final_ans4 = "\n".join(final_ans4_list)
+    final_ans5_list = ["Answer 5: ", variable_ans5]
+    final_ans5 = "\n".join(final_ans5_list)
+
+
+    #debug step
+    #print(final_question)
+    #print(final_ans1)
+    #print(final_ans2)
+    #print(final_ans3)
+    #print(final_ans4)
+    #print(final_ans5)
+
+
+    #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
+    final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5]
+    final_sendoff = "\n".join(final_sendoff_list)
+    print(final_sendoff)
+
+#3 - Six Choice Question  DONE
+
+elif question_type == 3:
+
+    result_answer1 = reader.readtext('ans1.png', detail = 0)
+    result_answer2 = reader.readtext('ans2.png', detail = 0)
+    result_answer3 = reader.readtext('ans3.png', detail = 0)
+    result_answer4 = reader.readtext('ans4.png', detail = 0)
+    result_answer5 = reader.readtext('ans5.png', detail = 0)
+    result_answer6 = reader.readtext('ans6.png', detail = 0)
+
+
+    #join the stuff outputted together in a useable format
+    variable_question = "\n".join(result_question)
+    variable_ans1 = "\n".join(result_answer1)
+    variable_ans2 = "\n".join(result_answer2)
+    variable_ans3 = "\n".join(result_answer3)
+    variable_ans4 = "\n".join(result_answer4)
+    variable_ans5 = "\n".join(result_answer5)
+    variable_ans6 = "\n".join(result_answer6)
+
+    #make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
+    prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, ONLY ANSWER WITH THE ACTUAL ANSWER PICKED AND NOTHING ELSE, you arent allowed to add any explanation or any additional words to the answer chosen by you, so you would only type the number of the answer and the answer next to it seperated by a colon. This is an example of how you should answer:", """ "Answer #: example answer """]
+    prequestion = "\n".join(prequestion_list)
+
+    #add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
+    final_question_list = [prequestion, "Answer the following question: ", variable_question]
+    final_question = "\n".join(final_question_list)
+
+    #do the same thing for the answers, but without the prequestion
+    final_ans1_list = ["Answer 1: ", variable_ans1]
+    final_ans1 = "\n".join(final_ans1_list)
+    final_ans2_list = ["Answer 2: ", variable_ans2]
+    final_ans2 = "\n".join(final_ans2_list)
+    final_ans3_list = ["Answer 3: ", variable_ans3]
+    final_ans3 = "\n".join(final_ans3_list)
+    final_ans4_list = ["Answer 4: ", variable_ans4]
+    final_ans4 = "\n".join(final_ans4_list)
+    final_ans5_list = ["Answer 5: ", variable_ans5]
+    final_ans5 = "\n".join(final_ans5_list)
+    final_ans6_list = ["Answer 6: ", variable_ans6]
+    final_ans6 = "\n".join(final_ans6_list)
+
+
+    #debug step
+    #print(final_question)
+    #print(final_ans1)
+    #print(final_ans2)
+    #print(final_ans3)
+    #print(final_ans4)
+    #print(final_ans5)
+    #print(final_ans6)
+
+
+    #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
+    final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5,final_ans6]
+    final_sendoff = "\n".join(final_sendoff_list)
+    print(final_sendoff)
+
+#4 - Multiple Answers (4 Choices) (2 Answers)   DONE
+
+elif question_type == 4:
+
+    result_answer1 = reader.readtext('ans1.png', detail = 0)
+    result_answer2 = reader.readtext('ans2.png', detail = 0)
+    result_answer3 = reader.readtext('ans3.png', detail = 0)
+    result_answer4 = reader.readtext('ans4.png', detail = 0)
+
+
+    #join the stuff outputted together in a useable format
+    variable_question = "\n".join(result_question)
+    variable_ans1 = "\n".join(result_answer1)
+    variable_ans2 = "\n".join(result_answer2)
+    variable_ans3 = "\n".join(result_answer3)
+    variable_ans4 = "\n".join(result_answer4)
+
+    #make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
+    prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, ONLY ANSWER WITH THE ACTUAL 2 ANSWERS PICKED AND NOTHING ELSE, you arent allowed to add any explanation or any additional words to the answer chosen by you, so you would only type the number of the answers and the answers next to it seperated by a colon. This is an example of how you should answer:", """ "Answer #: example answer  and Answer #: example answer """]
+    prequestion = "\n".join(prequestion_list)
+
+    #add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
+    final_question_list = [prequestion, "Answer the following question: ", variable_question]
+    final_question = "\n".join(final_question_list)
+
+    #do the same thing for the answers, but without the prequestion
+    final_ans1_list = ["Answer 1: ", variable_ans1]
+    final_ans1 = "\n".join(final_ans1_list)
+    final_ans2_list = ["Answer 2: ", variable_ans2]
+    final_ans2 = "\n".join(final_ans2_list)
+    final_ans3_list = ["Answer 3: ", variable_ans3]
+    final_ans3 = "\n".join(final_ans3_list)
+    final_ans4_list = ["Answer 4: ", variable_ans4]
+    final_ans4 = "\n".join(final_ans4_list)
+
+
+    #debug step
+    #print(final_question)
+    #print(final_ans1)
+    #print(final_ans2)
+    #print(final_ans3)
+    #print(final_ans4)
+
+
+    #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
+    final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4]
+    final_sendoff = "\n".join(final_sendoff_list)
+    print(final_sendoff)
+
+#5 - Multiple Answers (4 Choices) (3 Answers)   DONE
+
+elif question_type == 5:
+
+    result_answer1 = reader.readtext('ans1.png', detail = 0)
+    result_answer2 = reader.readtext('ans2.png', detail = 0)
+    result_answer3 = reader.readtext('ans3.png', detail = 0)
+    result_answer4 = reader.readtext('ans4.png', detail = 0)
+
+
+    #join the stuff outputted together in a useable format
+    variable_question = "\n".join(result_question)
+    variable_ans1 = "\n".join(result_answer1)
+    variable_ans2 = "\n".join(result_answer2)
+    variable_ans3 = "\n".join(result_answer3)
+    variable_ans4 = "\n".join(result_answer4)
+
+    #make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
+    prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, ONLY ANSWER WITH THE ACTUAL 3 ANSWERS PICKED AND NOTHING ELSE, you arent allowed to add any explanation or any additional words to the answer chosen by you, so you would only type the number of the answers and the answers next to it seperated by a colon. This is an example of how you should answer:", """ "Answer #: example answer  ,  Answer #: example answer   and Answer #: example answer"""]
+    prequestion = "\n".join(prequestion_list)
+
+    #add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
+    final_question_list = [prequestion, "Answer the following question: ", variable_question]
+    final_question = "\n".join(final_question_list)
+
+    #do the same thing for the answers, but without the prequestion
+    final_ans1_list = ["Answer 1: ", variable_ans1]
+    final_ans1 = "\n".join(final_ans1_list)
+    final_ans2_list = ["Answer 2: ", variable_ans2]
+    final_ans2 = "\n".join(final_ans2_list)
+    final_ans3_list = ["Answer 3: ", variable_ans3]
+    final_ans3 = "\n".join(final_ans3_list)
+    final_ans4_list = ["Answer 4: ", variable_ans4]
+    final_ans4 = "\n".join(final_ans4_list)
+
+
+    #debug step
+    #print(final_question)
+    #print(final_ans1)
+    #print(final_ans2)
+    #print(final_ans3)
+    #print(final_ans4)
+
+
+    #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
+    final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4]
+    final_sendoff = "\n".join(final_sendoff_list)
+    print(final_sendoff)
+
+
+#6 - Multiple Answers (5 Choices) (2 Answers)   DONE
+
+elif question_type == 6:
+
+    result_answer1 = reader.readtext('ans1.png', detail = 0)
+    result_answer2 = reader.readtext('ans2.png', detail = 0)
+    result_answer3 = reader.readtext('ans3.png', detail = 0)
+    result_answer4 = reader.readtext('ans4.png', detail = 0)
+    result_answer5 = reader.readtext('ans5.png', detail = 0)
+
+
+    #join the stuff outputted together in a useable format
+    variable_question = "\n".join(result_question)
+    variable_ans1 = "\n".join(result_answer1)
+    variable_ans2 = "\n".join(result_answer2)
+    variable_ans3 = "\n".join(result_answer3)
+    variable_ans4 = "\n".join(result_answer4)
+    variable_ans5 = "\n".join(result_answer5)
+
+    #make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
+    prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, ONLY ANSWER WITH THE ACTUAL 2 ANSWERS PICKED AND NOTHING ELSE, you arent allowed to add any explanation or any additional words to the answer chosen by you, so you would only type the number of the answers and the answers next to it seperated by a colon. This is an example of how you should answer:", """ "Answer #: example answer  and Answer #: example answer """]
+    prequestion = "\n".join(prequestion_list)
+
+    #add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
+    final_question_list = [prequestion, "Answer the following question: ", variable_question]
+    final_question = "\n".join(final_question_list)
+
+    #do the same thing for the answers, but without the prequestion
+    final_ans1_list = ["Answer 1: ", variable_ans1]
+    final_ans1 = "\n".join(final_ans1_list)
+    final_ans2_list = ["Answer 2: ", variable_ans2]
+    final_ans2 = "\n".join(final_ans2_list)
+    final_ans3_list = ["Answer 3: ", variable_ans3]
+    final_ans3 = "\n".join(final_ans3_list)
+    final_ans4_list = ["Answer 4: ", variable_ans4]
+    final_ans4 = "\n".join(final_ans4_list)
+    final_ans5_list = ["Answer 5: ", variable_ans5]
+    final_ans5 = "\n".join(final_ans5_list)
+
+
+    #debug step
+    #print(final_question)
+    #print(final_ans1)
+    #print(final_ans2)
+    #print(final_ans3)
+    #print(final_ans4)
+
+
+    #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
+    final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5]
+    final_sendoff = "\n".join(final_sendoff_list)
+    print(final_sendoff)
+
+#7 - Multiple Answers (5 Choices) (3 Answers)  DONE
+
+elif question_type == 7:
+
+    result_answer1 = reader.readtext('ans1.png', detail = 0)
+    result_answer2 = reader.readtext('ans2.png', detail = 0)
+    result_answer3 = reader.readtext('ans3.png', detail = 0)
+    result_answer4 = reader.readtext('ans4.png', detail = 0)
+    result_answer5 = reader.readtext('ans5.png', detail = 0)
+
+
+    #join the stuff outputted together in a useable format
+    variable_question = "\n".join(result_question)
+    variable_ans1 = "\n".join(result_answer1)
+    variable_ans2 = "\n".join(result_answer2)
+    variable_ans3 = "\n".join(result_answer3)
+    variable_ans4 = "\n".join(result_answer4)
+    variable_ans5 =  "\n".join(result_answer5)
+
+
+    #make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
+    prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, ONLY ANSWER WITH THE ACTUAL 3 ANSWERS PICKED AND NOTHING ELSE, you arent allowed to add any explanation or any additional words to the answer chosen by you, so you would only type the number of the answers and the answers next to it seperated by a colon. This is an example of how you should answer:", """ "Answer #: example answer  ,  Answer #: example answer   and Answer #: example answer"""]
+    prequestion = "\n".join(prequestion_list)
+
+    #add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
+    final_question_list = [prequestion, "Answer the following question: ", variable_question]
+    final_question = "\n".join(final_question_list)
+
+    #do the same thing for the answers, but without the prequestion
+    final_ans1_list = ["Answer 1: ", variable_ans1]
+    final_ans1 = "\n".join(final_ans1_list)
+    final_ans2_list = ["Answer 2: ", variable_ans2]
+    final_ans2 = "\n".join(final_ans2_list)
+    final_ans3_list = ["Answer 3: ", variable_ans3]
+    final_ans3 = "\n".join(final_ans3_list)
+    final_ans4_list = ["Answer 4: ", variable_ans4]
+    final_ans4 = "\n".join(final_ans4_list)
+    final_ans5_list =  ["Answer 5: ", variable_ans5]
+    final_ans5 = "\n".join(final_ans5_list)
+
+   
+
+
+    #debug step
+    #print(final_question)
+    #print(final_ans1)
+    #print(final_ans2)
+    #print(final_ans3)
+    #print(final_ans4)
+
+
+    #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
+    final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5]
+    final_sendoff = "\n".join(final_sendoff_list)
+    print(final_sendoff)
+
+#8 - Multiple Answers (6 Choices) (2 Answers)
+
+elif question_type == 8:
+
+    result_answer1 = reader.readtext('ans1.png', detail = 0)
+    result_answer2 = reader.readtext('ans2.png', detail = 0)
+    result_answer3 = reader.readtext('ans3.png', detail = 0)
+    result_answer4 = reader.readtext('ans4.png', detail = 0)
+    result_answer5 = reader.readtext('ans5.png', detail = 0)
+    result_answer6 = reader.readtext('ans6.png', detail = 0)
+
+
+    #join the stuff outputted together in a useable format
+    variable_question = "\n".join(result_question)
+    variable_ans1 = "\n".join(result_answer1)
+    variable_ans2 = "\n".join(result_answer2)
+    variable_ans3 = "\n".join(result_answer3)
+    variable_ans4 = "\n".join(result_answer4)
+    variable_ans5 = "\n".join(result_answer5)
+    variable_ans6 = "\n".join(result_answer6)
+
+    #make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
+    prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, ONLY ANSWER WITH THE ACTUAL 2 ANSWERS PICKED AND NOTHING ELSE, you arent allowed to add any explanation or any additional words to the answer chosen by you, so you would only type the number of the answers and the answers next to it seperated by a colon. This is an example of how you should answer:", """ "Answer #: example answer  and Answer #: example answer """]
+    prequestion = "\n".join(prequestion_list)
+
+    #add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
+    final_question_list = [prequestion, "Answer the following question: ", variable_question]
+    final_question = "\n".join(final_question_list)
+
+    #do the same thing for the answers, but without the prequestion
+    final_ans1_list = ["Answer 1: ", variable_ans1]
+    final_ans1 = "\n".join(final_ans1_list)
+    final_ans2_list = ["Answer 2: ", variable_ans2]
+    final_ans2 = "\n".join(final_ans2_list)
+    final_ans3_list = ["Answer 3: ", variable_ans3]
+    final_ans3 = "\n".join(final_ans3_list)
+    final_ans4_list = ["Answer 4: ", variable_ans4]
+    final_ans4 = "\n".join(final_ans4_list)
+    final_ans5_list = ["Answer 5: ", variable_ans5]
+    final_ans5 = "\n".join(final_ans5_list)
+    final_ans6_list = ["Answer 6: ", variable_ans6]
+    final_ans6 = "\n".join(final_ans6_list)
+
+
+    #debug step
+    #print(final_question)
+    #print(final_ans1)
+    #print(final_ans2)
+    #print(final_ans3)
+    #print(final_ans4)
+
+
+    #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
+    final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5, final_ans6]
+    final_sendoff = "\n".join(final_sendoff_list)
+    print(final_sendoff)
+
+#9 - Multiple Answers (6 Choices) (3 Answers)
+
+elif question_type == 9:
+
+    result_answer1 = reader.readtext('ans1.png', detail = 0)
+    result_answer2 = reader.readtext('ans2.png', detail = 0)
+    result_answer3 = reader.readtext('ans3.png', detail = 0)
+    result_answer4 = reader.readtext('ans4.png', detail = 0)
+    result_answer5 = reader.readtext('ans5.png', detail = 0)
+    result_answer6 = reader.readtext('ans6.png', detail = 0)
+
+
+    #join the stuff outputted together in a useable format
+    variable_question = "\n".join(result_question)
+    variable_ans1 = "\n".join(result_answer1)
+    variable_ans2 = "\n".join(result_answer2)
+    variable_ans3 = "\n".join(result_answer3)
+    variable_ans4 = "\n".join(result_answer4)
+    variable_ans5 =  "\n".join(result_answer5)
+    variable_ans6 =  "\n".join(result_answer6)
+
+    #make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
+    prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, ONLY ANSWER WITH THE ACTUAL 3 ANSWERS PICKED AND NOTHING ELSE, you arent allowed to add any explanation or any additional words to the answer chosen by you, so you would only type the number of the answers and the answers next to it seperated by a colon. This is an example of how you should answer:", """ "Answer #: example answer  ,  Answer #: example answer   and Answer #: example answer"""]
+    prequestion = "\n".join(prequestion_list)
+
+    #add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
+    final_question_list = [prequestion, "Answer the following question: ", variable_question]
+    final_question = "\n".join(final_question_list)
+
+    #do the same thing for the answers, but without the prequestion
+    final_ans1_list = ["Answer 1: ", variable_ans1]
+    final_ans1 = "\n".join(final_ans1_list)
+    final_ans2_list = ["Answer 2: ", variable_ans2]
+    final_ans2 = "\n".join(final_ans2_list)
+    final_ans3_list = ["Answer 3: ", variable_ans3]
+    final_ans3 = "\n".join(final_ans3_list)
+    final_ans4_list = ["Answer 4: ", variable_ans4]
+    final_ans4 = "\n".join(final_ans4_list)
+    final_ans5_list =  ["Answer 5: ", variable_ans5]
+    final_ans5 = "\n".join(final_ans5_list)
+    final_ans6_list =  ["Answer 6: ", variable_ans6]
+    final_ans6 = "\n".join(final_ans6_list)
+
+   
+
+
+    #debug step
+    #print(final_question)
+    #print(final_ans1)
+    #print(final_ans2)
+    #print(final_ans3)
+    #print(final_ans4)
+
+
+    #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
+    final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5, final_ans6]
+    final_sendoff = "\n".join(final_sendoff_list)
+    print(final_sendoff)
+
+#10 - Input Question
+
+elif question_type == 10:
+
+
+
+
+    #join the stuff outputted together in a useable format
+    variable_question = "\n".join(result_question)
+
+    #make a prompt to be used for before the actual questions + answers so GPT-4 can know how to answer
+    prequestion_list = ["IF YOU SEE ANY SPELLING MISTAKES, PLEASE FIX THEM IN YOUR MIND, the question might be seperated into short phrases, so if you notice that, please fix them in your mind, please answer as accurately as possible, act like this is a test for you. When you answer, you arent allowed to add any explanation or any additional words to the answer that would fit."]
+    prequestion = "\n".join(prequestion_list)
+
+    #add prequestion, a simple "ask the following question" thing, and put the actual question and join them as a list
+    final_question_list = [prequestion, "Answer the following question: ", variable_question]
+    final_question = "\n".join(final_question_list)
+
+
+   
+
+
+    #debug step
+    #print(final_question)
+
+
+
+    #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
+    final_sendoff_list = [final_question]
+    final_sendoff = "\n".join(final_sendoff_list)
+    print(final_sendoff)
 
 ##################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
 
