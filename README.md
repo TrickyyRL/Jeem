@@ -1,7 +1,7 @@
 # alef-botter V2
 
 ## What is this?
-### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program figure it out!
+### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program hopefully figure it out!
 
 
 ## Current Modes
@@ -58,4 +58,4 @@ pip install -r requirements.txt
 **Try running the script again or retake your images. That should be fixed with V2 though.**
 
 ### 5. *bro your stupid ass script got a question wrong (finally), why????*
-**It doesn't happen that much, but this is an AI that's responding (specifically GPT-4), so it isn't perfect (no one is perfect anyways).**
+**It doesn't happen that much, but this is an AI that's responding (specifically Bing AI (GPT-4)), so it isn't perfect (no one is perfect anyways).**
