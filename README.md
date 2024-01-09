@@ -4,6 +4,9 @@
 ### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program figure it out!
 
 
+## V2 COMING SOON!
+
+
 ## How to install?
 ### 1. Click on the Code button and press "Download ZIP".
 ### 2. Make sure to extract the ZIP file you installed
