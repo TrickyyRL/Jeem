@@ -1,10 +1,10 @@
-# alef-botter
+# alef-botter V1
 
 ## What is this?
 ### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program figure it out!
 
 
-## V2 COMING SOON!
+
 
 
 ## How to install?
