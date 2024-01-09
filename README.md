@@ -1,10 +1,22 @@
-# alef-botter
+
+# alef-botter V2
 
 ## What is this?
 ### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program hopefully figure it out!
 
 
-## V2 COMING SOON!
+## Current Modes
+### 1 - Multiple Choice (4 Answers)
+### 2 - Multiple Choice (5 Answers)
+### 3 - Multiple Choice (6 Answers)
+### 4 - Multiple Answers (4 Choices) (2 Answers)
+### 5 - Multiple Answers (4 Choices) (3 Answers)
+### 6 - Multiple Answers (5 Choices) (2 Answers)
+### 7 - Multiple Answers (5 Choices) (3 Answers)
+### 8 - Multiple Answers (6 Choices) (2 Answers)
+### 9 - Multiple Answers (6 Choices) (3 Answers)
+### 10 - Input Question
+### 11 - Multiple Choice (3 Choices)
 
 
 ## How to install?
@@ -16,15 +28,17 @@
 pip install -r requirements.txt
 ```
 ### 5. Put in your question and answers images. USE THIS FOLLOWING FORMAT:
-ans1.png
+**ans1.png**
 
-ans2.png
+**ans2.png**
 
-ans3.png
+**ans3.png**
 
-ans4.png
+**ans4.png**
 
-question.png
+**question.png**
+
+
 ### 6. Run the `main.py` file
 ### 7. Enjoy! ✨🔥
 
@@ -33,16 +47,16 @@ question.png
 ## FAQ
 
 ### 1. *The script doesn't output a response, what do I do?*
- In that case, just retake your images because maybe they aren't clear enough for the script to recognize the text in the images perfectly.
+**In that case, just retake your images because maybe they aren't clear enough for the script to recognize the text in the images perfectly.**
 
 ### 2. *Is 1+1 actually 1.5?*
-yes
+***yes***
 
 ### 3. *Can't you just make a video tutorial? This is too hard for me*
-Sure, it will be in the works. (i dont got much time on this project im too busy).
+**Sure, it will be in the works. (i dont got much time on this project im too busy).**
 
 ### 4. *OH NO THE SCRIPT IS REBELLING AGAINST ME WHAT DO I DO?!?!!?!*
-Try running the script again or retake your images.
+**Try running the script again or retake your images. That should be fixed with V2 though.**
 
 ### 5. *bro your stupid ass script got a question wrong (finally), why????*
-It doesn't happen that much, but this is an AI that's responding (specifically GPT-4), so it isn't perfect (no one is perfect anyways).
+**It doesn't happen that much, but this is an AI that's responding (specifically Bing AI (GPT-4)), so it isn't perfect (no one is perfect anyways).**
