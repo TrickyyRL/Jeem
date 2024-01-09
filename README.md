@@ -1,7 +1,7 @@
 # alef-botter
 
 ## What is this?
-### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program figure it out!
+### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program hopefully figure it out!
 
 
 ## V2 COMING SOON!
