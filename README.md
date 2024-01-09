@@ -4,6 +4,19 @@
 ### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program figure it out!
 
 
+## Current Modes
+### 1 - Multiple Choice (4 Answers)
+### 2 - Multiple Choice (5 Answers)
+### 3 - Multiple Choice (6 Answers)
+### 4 - Multiple Answers (4 Choices) (2 Answers)
+### 5 - Multiple Answers (4 Choices) (3 Answers)
+### 6 - Multiple Answers (5 Choices) (2 Answers)
+### 7 - Multiple Answers (5 Choices) (3 Answers)
+### 8 - Multiple Answers (6 Choices) (2 Answers)
+### 9 - Multiple Answers (6 Choices) (3 Answers)
+### 10 - Input Question
+### 11 - Multiple Choice (3 Choices)
+
 ## How to install?
 ### 1. Click on the Code button and press "Download ZIP".
 ### 2. Make sure to extract the ZIP file you installed
