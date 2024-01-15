@@ -1,8 +1,16 @@
 
-# alef-botter V2
+# alef-botter V2.1
+
+
+## NEW FEATURE! ADDING MODELS
+I have added the normal ChatGPT model into this program as well as having GPT-4 as an option. More models coming soon! 👍🤖
+
+
 
 ## What is this?
 ### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program hopefully figure it out!
+
+
 
 
 ## Current Modes
