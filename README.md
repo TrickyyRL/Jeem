@@ -1,8 +1,16 @@
 
-# alef-botter V2
+# alef-botter V2.1
+
+
+## NEW FEATURE! ADDING MODELS
+I have added the normal ChatGPT model into this program as well as having GPT-4 as an option. More models coming soon! 👍🤖
+
+
 
 ## What is this?
 ### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program hopefully figure it out!
+
+
 
 
 ## Current Modes
@@ -17,6 +25,11 @@
 ### 9 - Multiple Answers (6 Choices) (3 Answers)
 ### 10 - Input Question
 ### 11 - Multiple Choice (3 Choices)
+
+
+## Current Models
+### 1 - GPT-4
+### 2 - GPT 3.5 (ChatGPT)
 
 
 ## How to install?
@@ -36,10 +49,13 @@ pip install -r requirements.txt
 
 **ans4.png**
 
+**You can add more answers if you want, just keep adding the number of answers**
+
+
 **question.png**
 
 
-### 6. Run the `main.py` file
+### 6. Run the `alefbotter.bat` file.
 ### 7. Enjoy! ✨🔥
 
 
