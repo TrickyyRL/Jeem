@@ -49,10 +49,13 @@ pip install -r requirements.txt
 
 **ans4.png**
 
+**You can add more answers if u want, just keep adding the number of answers**
+
+
 **question.png**
 
 
-### 6. Run the `main.py` file
+### 6. Run the `alefbotter.bat` file.
 ### 7. Enjoy! ✨🔥
 
 
