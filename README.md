@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 **ans4.png**
 
-**You can add more answers if u want, just keep adding the number of answers**
+**You can add more answers if you want, just keep adding the number of answers**
 
 
 **question.png**
