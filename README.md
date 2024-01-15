@@ -27,6 +27,11 @@ I have added the normal ChatGPT model into this program as well as having GPT-4 
 ### 11 - Multiple Choice (3 Choices)
 
 
+## Current Models
+# 1 - GPT-4
+# 2 - GPT 3.5 (ChatGPT)
+
+
 ## How to install?
 ### 1. Click on the Code button and press "Download ZIP".
 ### 2. Make sure to extract the ZIP file you installed
