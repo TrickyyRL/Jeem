@@ -28,8 +28,8 @@ I have added the normal ChatGPT model into this program as well as having GPT-4 
 
 
 ## Current Models
-# 1 - GPT-4
-# 2 - GPT 3.5 (ChatGPT)
+### 1 - GPT-4
+### 2 - GPT 3.5 (ChatGPT)
 
 
 ## How to install?
