@@ -8,7 +8,7 @@ I have added the normal ChatGPT model into this program as well as having GPT-4 
 
 
 ## What is this?
-### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program hopefully figure it out!
+### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program hopefully figure it out! 🤖📖
 
 
 
@@ -28,8 +28,8 @@ I have added the normal ChatGPT model into this program as well as having GPT-4 
 
 
 ## Current Models
-### 1 - GPT-4
-### 2 - GPT 3.5 (ChatGPT)
+### 1 - GPT-4 (SMARTEST MODEL)
+### 2 - GPT 3.5 (FASTEST MODEL) (ChatGPT)
 
 
 ## How to install?
@@ -40,6 +40,7 @@ I have added the normal ChatGPT model into this program as well as having GPT-4 
 ```
 pip install -r requirements.txt
 ```
+
 ### 5. Put in your question and answers images. USE THIS FOLLOWING FORMAT:
 **ans1.png**
 
@@ -57,6 +58,7 @@ pip install -r requirements.txt
 
 ### 6. Run the `alefbotter.bat` file.
 ### 7. Enjoy! ✨🔥
+### If you have any problems with the installation and running the script, please either go to the issues tab and report it or if you can code, please make a pull request!
 
 
 
