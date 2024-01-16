@@ -1,9 +1,9 @@
 
-# alef-botter V2.1
+# alef-botter V2.11 BETA
 
 
 ## NEW FEATURE! ADDING MODELS
-I have added the normal ChatGPT model into this program as well as having GPT-4 as an option. More models coming soon! 👍🤖
+I have added some newmodels into this program. Check them out in the current models section 👍🤖
 
 
 
@@ -30,6 +30,7 @@ I have added the normal ChatGPT model into this program as well as having GPT-4 
 ## Current Models
 ### 1 - GPT-4 (SMARTEST MODEL)
 ### 2 - GPT 3.5 (FASTEST MODEL) (ChatGPT)
+### 3 - Phixtral
 
 
 ## How to install?
