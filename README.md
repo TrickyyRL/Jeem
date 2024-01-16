@@ -3,7 +3,7 @@
 
 
 ## NEW FEATURE! ADDING MODELS
-I have added some newmodels into this program. Check them out in the current models section 👍🤖
+I have added some new models into this program. Check them out in the current models section 👍🤖
 
 
 
