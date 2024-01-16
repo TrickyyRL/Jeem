@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 ### 6. Run the `alefbotter.bat` file.
 ### 7. Enjoy! ✨🔥
-### If you have any problems with the installation and running the script, please either go to the issues tab and report it or if you can code, please make a pull request!
+### If you have any problems with the installation and running the script, please either go to the issues tab and report it, or if you can code, please make a pull request!
 
 
 
