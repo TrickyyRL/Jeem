@@ -673,6 +673,7 @@ elif model_to_use == 2:
     print(response)
 
 elif model_to_use == 3:
+    #the response of Phixtral gets created here
     client = Client("https://mlabonne-phixtral-chat.hf.space/--replicas/xblu7/")
     result = client.predict(
     final_sendoff,	# str  in 'Message' Textbox component
