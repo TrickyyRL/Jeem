@@ -13,7 +13,7 @@ from g4f.Provider import (
 
 
 
-c#define the ocr language
+#define the ocr language
 
 print("Please provide the language you want to use:")
 print()
