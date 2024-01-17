@@ -22,7 +22,7 @@ print("en - english")
 print("ar - arabic")
 print()
 readerask = input("> ")
-reader = easyocr.Reader([readerask],gpu=false) # this needs to run only once to load the model into memory
+reader = easyocr.Reader([readerask]) # this needs to run only once to load the model into memory
 
 
 
