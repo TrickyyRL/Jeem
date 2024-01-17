@@ -29,9 +29,9 @@ I have added some new models into this program. Check them out in the current mo
 
 ## Current Models
 ### 1 - GPT-4 (SMARTEST MODEL)
-### 2 - GPT 3.5 (FASTEST MODEL) (ChatGPT)
+### 2 - GPT 3.5 Turbo (FASTEST MODEL) (ChatGPT)
 ### 3 - Phixtral
-
+### 4 - Beyonder
 
 ## How to install?
 ### 1. Click on the Code button and press "Download ZIP".
