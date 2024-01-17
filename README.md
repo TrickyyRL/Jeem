@@ -1,5 +1,5 @@
 
-# alef-botter V2.11 BETA
+# alef-botter V2.11
 
 
 ## NEW FEATURE! ADDING MODELS
