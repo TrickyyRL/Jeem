@@ -37,7 +37,7 @@ I have added some new models into this program. Check them out in the current mo
 ### 1. Click on the Code button and press "Download ZIP".
 ### 2. Make sure to extract the ZIP file you installed
 ### 3. Make sure you have Python and PIP.
-### 4. Go inside the file, then press this bar and type in the following command:
+### 4. Open the command prompt by searching ***CMD*** in the Windows search and put in the following command:
 ```
 pip install -r requirements.txt
 ```
