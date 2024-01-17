@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 ### 6. Run the `alefbotter.bat` file.
 ### 7. Enjoy! ✨🔥
-### If you have any problems with the installation and running the script, please either go to the issues tab and report it, or if you can code, please make a pull request!
+### If you have any problems with the installation and running the script, please either go to the issues tab and report it, or if you can code, please make a pull request and I will look into it!
 
 
 
@@ -71,14 +71,14 @@ pip install -r requirements.txt
 ### 2. *Is 1+1 actually 1.5?*
 ***yes***
 
-### 3. *Can't you just make a video tutorial? This is too hard for me*
+### 3. *Can't you just make a video tutorial? This is too hard for me :/*
 **Sure, it will be in the works. (i dont got much time on this project im too busy).**
 
 ### 4. *OH NO THE SCRIPT IS REBELLING AGAINST ME WHAT DO I DO?!?!!?!*
-**Try running the script again or retake your images. That should be fixed with V2 though.**
+**Try running the script again or retake your images. That should be fixed with update V2 or higher though.**
 
 ### 5. *bro your stupid ass script got a question wrong (finally), why????*
-**It doesn't happen that much, but this is an AI that's responding (specifically Bing AI (GPT-4)), so it isn't perfect (no one is perfect anyways).**
+**It doesn't happen that much, but this is an AI that's responding, so it isn't perfect (no one is perfect anyways).**
 
 ### 6. *The script sends an error when I try to use anything other than GPT-4.*
 **Try switching to a different network.**
