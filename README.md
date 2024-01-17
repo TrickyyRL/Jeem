@@ -79,3 +79,6 @@ pip install -r requirements.txt
 
 ### 5. *bro your stupid ass script got a question wrong (finally), why????*
 **It doesn't happen that much, but this is an AI that's responding (specifically Bing AI (GPT-4)), so it isn't perfect (no one is perfect anyways).**
+
+### 6. *The script sends an error when I try to use anything other than GPT-4.*
+**Try switching to a different network.**
