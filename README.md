@@ -2,7 +2,7 @@
 # alef-botter V2.11
 
 
-## NEW FEATURE! ADDING MODELS
+## NEW FEATURE! MORE LLM MODEL OPTIONS!
 I have added some new models into this program. Check them out in the current models section 👍🤖
 
 
