@@ -33,7 +33,7 @@ result_question = reader.readtext('question.png', detail = 0)
 
 
 #ask for the mode the user wants to use
-
+print()
 print("What kind of question is your question that you are trying to solve?")
 print()
 print("1 - Multiple Choice (4 Choices)")
@@ -100,6 +100,9 @@ if question_type == 1:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 #2 - Five Choice Question   DONE
@@ -154,6 +157,9 @@ elif question_type == 2:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 #3 - Six Choice Question  DONE
@@ -214,6 +220,9 @@ elif question_type == 3:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5,final_ans6]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 #4 - Multiple Answers (4 Choices) (2 Answers)   DONE   CONFIRMED TO WORK
@@ -264,6 +273,9 @@ elif question_type == 4:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 #5 - Multiple Answers (4 Choices) (3 Answers)   DONE
@@ -314,6 +326,9 @@ elif question_type == 5:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 
@@ -368,6 +383,9 @@ elif question_type == 6:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 #7 - Multiple Answers (5 Choices) (3 Answers)  DONE
@@ -425,6 +443,9 @@ elif question_type == 7:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 #8 - Multiple Answers (6 Choices) (2 Answers)  DONE
@@ -483,6 +504,9 @@ elif question_type == 8:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5, final_ans6]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 #9 - Multiple Answers (6 Choices) (3 Answers) DONE
@@ -543,6 +567,9 @@ elif question_type == 9:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3, final_ans4, final_ans5, final_ans6]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 #10 - Input Question  DONE
@@ -575,6 +602,9 @@ elif question_type == 10:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 
@@ -622,19 +652,23 @@ elif question_type == 11:
     #this grabs all the final variables into one list, then into a variable. this is now the constructed prompt that goes to GPT-4
     final_sendoff_list = [final_question, final_ans1, final_ans2, final_ans3]
     final_sendoff = "\n".join(final_sendoff_list)
+    print()
+    print()
+    print("Final output:")
     print(final_sendoff)
 
 ##################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
 
 #GPT4Free Part
+print()
 print("Which model would you like to use for response?")
 print()
 print("MORE MODELS COMING SOON")
 print()
 print("1 - GPT-4  (SMARTEST MODEL)")
 print("2 - GPT 3.5 (FASTEST MODEL) (ChatGPT)")
-print("3 - Phixtral")
-print("4 - Beyonder")
+print("3 - Phixtral (Open Source)")
+print("4 - Beyonder (Open Source)")
 
 
 print()
@@ -645,8 +679,8 @@ model_to_use = int(model_to_use)
 print("Generating answer...")
 g4f.debug.logging = False  # enable logging
 g4f.check_version = False  # disable automatic version checking
-#print(g4f.version)  # check version
-#print(g4f.Provider.Ails.params)  # supported args
+print(g4f.version)  # check version
+print(g4f.Provider.Ails.params)  # supported args
 
 if model_to_use == 1:
     # the response of GPT-4 gets created here
@@ -658,6 +692,7 @@ if model_to_use == 1:
 
 
     #prints out the answer
+    print()
     print(response)
 
 elif model_to_use == 2:
@@ -670,24 +705,30 @@ elif model_to_use == 2:
 
 
     #prints out the answer
-
+    print()
     print(response)
 
 elif model_to_use == 3:
+    # the response of Phixtral gets created here
     client = Client("https://mlabonne-phixtral-chat.hf.space/--replicas/xblu7/")
     result = client.predict(
     final_sendoff,	# str  in 'Message' Textbox component
     api_name="/chat"
 )
+    print()
     print(result)
 
 
 elif model_to_use == 4:
+    # the response of Beyonder gets created here
     client = Client("https://mlabonne-beyonder-4x7b-v2-gguf-chat.hf.space/--replicas/f33hu/")
     result = client.predict(
 		    final_sendoff,	# str  in 'Message' Textbox component
 		    final_sendoff,	# str  in 'parameter_0' Textbox component
 		    api_name="/chat"
     )
+    print()
     print(result)
+
+
 #ggs, you got your answer :)
