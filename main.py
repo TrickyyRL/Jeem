@@ -7,13 +7,13 @@ from g4f.Provider import (
     )
 
 
-    ##################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+##################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
 
-    #EasyOCR part
+#EasyOCR part
 
 
 
-    #define the ocr language
+c#define the ocr language
 
 print("Please provide the language you want to use:")
 print()
@@ -631,9 +631,10 @@ print("Which model would you like to use for response?")
 print()
 print("MORE MODELS COMING SOON")
 print()
-print("1 - GPT-4  (BEST MODEL)")
-print("2 - GPT 3.5 (ChatGPT)")
+print("1 - GPT-4  (SMARTEST MODEL)")
+print("2 - GPT 3.5 (FASTEST MODEL) (ChatGPT)")
 print("3 - Phixtral")
+print("4 - Beyonder")
 
 
 print()
@@ -673,7 +674,6 @@ elif model_to_use == 2:
     print(response)
 
 elif model_to_use == 3:
-    #the response of Phixtral gets created here
     client = Client("https://mlabonne-phixtral-chat.hf.space/--replicas/xblu7/")
     result = client.predict(
     final_sendoff,	# str  in 'Message' Textbox component
@@ -681,4 +681,13 @@ elif model_to_use == 3:
 )
     print(result)
 
+
+elif model_to_use == 4:
+    client = Client("https://mlabonne-beyonder-4x7b-v2-gguf-chat.hf.space/--replicas/f33hu/")
+    result = client.predict(
+		    final_sendoff,	# str  in 'Message' Textbox component
+		    final_sendoff,	# str  in 'parameter_0' Textbox component
+		    api_name="/chat"
+    )
+    print(result)
 #ggs, you got your answer :)
