@@ -26,7 +26,7 @@ This is a script that solves your Alef assignments by taking screenshots of the 
 
 ### New Feature! More LLM Model Options!
 
-I have added some new models into this program. Check them out in the current models section 👍🤖
+I have added some new models into this program. Check them out in the models section 👍🤖
 
 ## 🎛️ Modes
 
