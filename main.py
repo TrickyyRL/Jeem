@@ -1,4 +1,4 @@
-#importing all neccecary libraries 
+#importing all neccecary libraries  
 import easyocr
 import g4f
 from gradio_client import Client
