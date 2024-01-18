@@ -1,5 +1,5 @@
 
-# alef-botter V2.113
+# Jeem V2.113
 
 ### NOTE: BY AGREEING TO USE THIS SCRIPT, YOU AGREE THAT I AM NOT RESPONSIBLE IF YOU GET CAUGHT USING THIS BY A SCHOOL ADMINISTRATOR OR TEACHER.
 
@@ -54,7 +54,7 @@ I have added some new models into this program. Check them out in the current mo
 **question.png**
 
 
-### 5. Run the `alefbotter.bat` file.
+### 5. Run the `Jeem.bat` file.
 ### 6. Enjoy! ✨🔥
 ### If you have any problems with the installation and running the script, please either go to the issues tab and report it, or if you can code, please make a pull request and I will look into it!
 ### If you have any questions, please ask in Discussions and I will probably respond! 😁
