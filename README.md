@@ -1,5 +1,5 @@
 
-# alef-botter V2.11
+# alef-botter V2.111
 
 ### NOTE: BY AGREEING TO USE THIS SCRIPT, YOU AGREE THAT I AM NOT RESPONSIBLE IF YOU GET CAUGHT USING THIS BY A SCHOOL ADMINISTRATOR OR TEACHER.
 
@@ -39,12 +39,7 @@ I have added some new models into this program. Check them out in the current mo
 ### 1. Click on the Code button and press "Download ZIP".
 ### 2. Make sure to extract the ZIP file you installed
 ### 3. Make sure you have Python and PIP.
-### 4. Open the command prompt by searching ***CMD*** in the Windows search and put in the following command:
-```
-pip install -r requirements.txt
-```
-
-### 5. Put in your question and answers images. USE THIS FOLLOWING FORMAT:
+### 4. Put in your question and answers images. USE THIS FOLLOWING FORMAT:
 **ans1.png**
 
 **ans2.png**
@@ -59,8 +54,8 @@ pip install -r requirements.txt
 **question.png**
 
 
-### 6. Run the `alefbotter.bat` file.
-### 7. Enjoy! ✨🔥
+### 5. Run the `alefbotter.bat` file.
+### 6. Enjoy! ✨🔥
 ### If you have any problems with the installation and running the script, please either go to the issues tab and report it, or if you can code, please make a pull request and I will look into it!
 
 
