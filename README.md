@@ -57,6 +57,7 @@ I have added some new models into this program. Check them out in the current mo
 ### 5. Run the `alefbotter.bat` file.
 ### 6. Enjoy! ✨🔥
 ### If you have any problems with the installation and running the script, please either go to the issues tab and report it, or if you can code, please make a pull request and I will look into it!
+### If you have any questions, please ask in Discussions and I will probably respond! 😁
 
 
 
