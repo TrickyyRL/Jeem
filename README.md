@@ -38,7 +38,7 @@ I have added some new models into this program. Check them out in the current mo
 ## How to install?
 ### 1. Click on the Code button and press "Download ZIP".
 ### 2. Make sure to extract the ZIP file you installed
-### 3. Make sure you have Python and PIP.
+### 3. Make sure you have Python and PIP. If you don't have them installed, I would reccomend installing Python 3.8 or 3.9. Make sure you install Python with PIP, that should be an option in the Python installer.
 ### 4. Put in your question and answers images. USE THIS FOLLOWING FORMAT:
 **ans1.png**
 
