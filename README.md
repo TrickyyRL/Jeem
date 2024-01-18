@@ -1,79 +1,88 @@
+---
+layout: center
+---
 
-# Jeem V2.113
+# **Jeem V2.113**
 
-### NOTE: BY AGREEING TO USE THIS SCRIPT, YOU AGREE THAT I AM NOT RESPONSIBLE IF YOU GET CAUGHT USING THIS BY A SCHOOL ADMINISTRATOR OR TEACHER.
+<p align="center">
+ <img src="logo.png" alt="Logo" width="150" height="150"/>
+</p>
 
+## 🚀 Quick Start
 
-## NEW FEATURE! MORE LLM MODEL OPTIONS!
+- Click on the Code button and press "Download ZIP".
+- Extract the ZIP file you installed.
+- Ensure you have Python and PIP installed. If not, install Python 3.8 or 3.9 with PIP.
+- Place your question and answer images in the correct format. See the Installation section for details.
+- Run the `Jeem.bat` file.
+
+Enjoy! ✨🔥
+
+## 🧐 About
+
+This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and letting the program figure it out! 🤖📖
+
+## 📝 Features
+
+### New Feature! More LLM Model Options!
+
 I have added some new models into this program. Check them out in the current models section 👍🤖
 
+## 🎛️ Modes
 
+1. Multiple Choice (4 Answers)
+2. Multiple Choice (5 Answers)
+3. Multiple Choice (6 Answers)
+4. Multiple Answers (4 Choices) (2 Answers)
+5. Multiple Answers (4 Choices) (3 Answers)
+6. Multiple Answers (5 Choices) (2 Answers)
+7. Multiple Answers (5 Choices) (3 Answers)
+8. Multiple Answers (6 Choices) (2 Answers)
+9. Multiple Answers (6 Choices) (3 Answers)
+10. Input Question
+11. Multiple Choice (3 Choices)
 
-## What is this?
-### This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and let the program hopefully figure it out! 🤖📖
+## 🏗️ Models
 
+1. GPT-4 (SMARTEST MODEL)
+2. GPT 3.5 Turbo (FASTEST MODEL) (ChatGPT)
+3. Phixtral
+4. Beyonder
 
+## 📚 Installation
 
+1. Click on the Code button and press "Download ZIP".
+2. Extract the ZIP file you installed.
+3. Ensure you have Python and PIP installed. If not, install Python 3.8 or 3.9 with PIP.
+4. Place your question and answer images in the correct format. See the Installation section for details.
+5. Run the `Jeem.bat` file.
 
-## Current Modes
-### 1 - Multiple Choice (4 Answers)
-### 2 - Multiple Choice (5 Answers)
-### 3 - Multiple Choice (6 Answers)
-### 4 - Multiple Answers (4 Choices) (2 Answers)
-### 5 - Multiple Answers (4 Choices) (3 Answers)
-### 6 - Multiple Answers (5 Choices) (2 Answers)
-### 7 - Multiple Answers (5 Choices) (3 Answers)
-### 8 - Multiple Answers (6 Choices) (2 Answers)
-### 9 - Multiple Answers (6 Choices) (3 Answers)
-### 10 - Input Question
-### 11 - Multiple Choice (3 Choices)
+If you encounter any problems with the installation and running the script, please either go to the issues tab and report it, or if you can code, please make a pull request and I will look into it! 
 
+If you have any questions, please ask in Discussions and I will probably respond! 😁
 
-## Current Models
-### 1 - GPT-4 (SMARTEST MODEL)
-### 2 - GPT 3.5 Turbo (FASTEST MODEL) (ChatGPT)
-### 3 - Phixtral
-### 4 - Beyonder
-
-## How to install?
-### 1. Click on the Code button and press "Download ZIP".
-### 2. Make sure to extract the ZIP file you installed
-### 3. Make sure you have Python and PIP. If you don't have them installed, I would reccomend installing Python 3.8 or 3.9. Make sure you install Python with PIP, that should be an option in the Python installer.
-### 4. Put in your question and answers images. USE THIS FOLLOWING FORMAT:
-**ans1.png**
-
-**ans2.png**
-
-**ans3.png**
-
-**ans4.png**
-
-**You can add more answers if you want, just keep adding the number of answers**
-
-
-**question.png**
-
-
-### 5. Run the `Jeem.bat` file.
-### 6. Enjoy! ✨🔥
-### If you have any problems with the installation and running the script, please either go to the issues tab and report it, or if you can code, please make a pull request and I will look into it!
-### If you have any questions, please ask in Discussions and I will probably respond! 😁
-
-
-
-## FAQ
+## 💬 Frequently Asked Questions
 
 ### 1. *The script doesn't output a response, what do I do?*
-**In that case, just retake your images because maybe they aren't clear enough for the script to recognize the text in the images perfectly.**
+
+In that case, just retake your images because maybe they aren't clear enough for the script to recognize the text in the images perfectly.
 
 ### 2. *Is 1+1 actually 1.5?*
-***yes***
+
+Yes.
 
 ### 3. *Can't you just make a video tutorial? This is too hard for me :/*
-**Sure, it will be in the works. (i dont got much time on this project im too busy).**
+
+Sure, it will be in the works. (I don't have much time on this project, I'm too busy).
 
 ### 4. *OH NO THE SCRIPT IS REBELLING AGAINST ME WHAT DO I DO?!?!!?!*
-**Try running the script again or retake your images. That should be fixed with update V2 or higher though.**
+
+Try running the script again or retake your images. That should be fixed with update V2 or higher though.
+
+---
+
+© 2024 Jeem V2.113. All rights reserved.
+
 
 ### 5. *bro your stupid ass script got a question wrong (finally), why????*
 **It doesn't happen that much, but this is an AI that's responding, so it isn't perfect (no one is perfect anyways).**
