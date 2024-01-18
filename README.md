@@ -54,8 +54,16 @@ I have added some new models into this program. Check them out in the models sec
 1. Click on the Code button and press "Download ZIP".
 2. Extract the ZIP file you installed.
 3. Ensure you have Python and PIP installed. If not, install Python 3.8 or 3.9 with PIP.
-4. Place your question and answer images in the correct format. See the Installation section for details.
-5. Run the `Jeem.bat` file.
+4. Place your question and answer images in the correct format:
+
+question.png
+ans1.png
+ans2.png
+ans3.png
+ans4.png
+ans5.png (Optional)
+ans6.png (Optional)
+6. Run the `Jeem.bat` file.
 
 If you encounter any problems with the installation and running the script, please either go to the issues tab and report it, or if you can code, please make a pull request and I will look into it! 
 
