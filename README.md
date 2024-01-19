@@ -1,8 +1,6 @@
----
-layout: center
----
 
-# **Jeem V2.113**
+
+#            **Jeem V2.113**
 
 <p align="center">
  <img src="logo.png" alt="Logo" width="500" height="500"/>
