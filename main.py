@@ -679,8 +679,6 @@ model_to_use = int(model_to_use)
 print("Generating answer...")
 g4f.debug.logging = False  # enable logging
 g4f.check_version = False  # disable automatic version checking
-print(g4f.version)  # check version
-print(g4f.Provider.Ails.params)  # supported args
 
 if model_to_use == 1:
     # the response of GPT-4 gets created here
