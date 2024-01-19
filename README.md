@@ -1,6 +1,4 @@
-
-
-#            **Jeem V2.113**
+# **Jeem V2.113**
 
 <p align="center">
  <img src="logo.png" alt="Logo" width="500" height="500"/>
@@ -25,6 +23,36 @@ This is a script that solves your Alef assignments by taking screenshots of the 
 ### New Feature! More LLM Model Options!
 
 I have added some new models into this program. Check them out in the models section 👍🤖
+
+
+This script is designed to automate the process of solving Alef assignments. It uses advanced machine learning models to analyze screenshot images of questions and answers, providing accurate solutions.
+
+### Supported Formats
+
+The script currently supports a variety of question formats, including multiple choice questions with varying numbers of answers, multiple answers questions, and input questions. This flexibility ensures that the script can handle a wide range of assignment types.
+
+### Advanced Machine Learning Models
+
+The script uses advanced machine learning models to interpret the questions and generate responses. It offers several different models to choose from, allowing users to select the one that best suits their needs. The models range from fastest to smartest, giving users the ability to balance speed and accuracy according to their requirements.
+
+### User-Friendly Interface
+
+Designed with user experience in mind, the script provides a simple and intuitive interface. Users can easily navigate through the various modes and models without needing extensive technical knowledge.
+
+### Customizable Settings
+
+Users have the freedom to customize settings according to their preferences. This includes choosing the preferred machine learning model and adjusting the quality of the images used for analysis.
+
+
+### Regular Updates
+
+The script is regularly updated to ensure optimal performance and to incorporate new features. Users can stay updated by checking the latest releases and changes.
+
+### Open Source
+
+As an open-source project, the script encourages contributions from the community. Developers can contribute by reporting bugs, suggesting improvements, or even submitting their own code.
+
+
 
 ## 🎛️ Modes
 
@@ -68,7 +96,7 @@ ans5.png (Optional)
 
 ans6.png (Optional)
 
-6. Run the `Jeem.bat` file.
+5. Run the `Jeem.bat` file.
 
 If you encounter any problems with the installation and running the script, please either go to the issues tab and report it, or if you can code, please make a pull request and I will look into it! 
 
@@ -82,7 +110,7 @@ In that case, just retake your images because maybe they aren't clear enough for
 
 ### 2. *Is 1+1 actually 1.5?*
 
-Yes.
+yes 💀
 
 ### 3. *Can't you just make a video tutorial? This is too hard for me :/*
 
