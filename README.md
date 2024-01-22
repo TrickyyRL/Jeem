@@ -41,7 +41,7 @@ Designed with user experience in mind, the script provides a simple and intuitiv
 
 ### Customizable Settings
 
-Users have the freedom to customize settings according to their preferences. This includes choosing the preferred machine learning model and adjusting the quality of the images used for analysis.
+Users have the freedom to customize settings according to their preferences. This includes choosing the preferred machine learning model and adjusting the language of the images used for analysis.
 
 
 ### Regular Updates
