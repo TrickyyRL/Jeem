@@ -16,7 +16,7 @@ Enjoy! ✨🔥
 
 ## 🧐 About
 
-This is a script that solves your Alef assignments by taking screenshots of the questions and answers, and letting the program figure it out! 🤖📖
+This is a python program that solves your Alef assignments by taking screenshots of the questions and answers, and letting the program figure it out! 🤖📖
 
 ## 📝 Features
 
