@@ -98,6 +98,8 @@ If you encounter any problems with the installation and running the Python progr
 
 If you have any questions, please ask in Discussions and I will probably respond! 😁
 
+If you can, please star this GitHub repo! ⭐
+
 ## 💬 Frequently Asked Questions
 
 ### 1. *The Python program doesn't output a response, what do I do?*
