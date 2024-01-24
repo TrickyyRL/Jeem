@@ -27,24 +27,24 @@ I have added some new models into this program. Check them out in the models sec
 
 This program is designed to automate the process of solving Alef assignments. It uses advanced machine learning models to analyze screenshot images of questions and answers, providing accurate solutions.
 
-### Supported Formats
+### Supported Formats 📃
 
 The program currently supports a variety of question formats, including multiple choice questions with varying numbers of answers, multiple answers questions, and input questions. This flexibility ensures that the program can handle a wide range of assignment types.
 
-### Advanced Machine Learning Models
+### Advanced Machine Learning Models 🧠
 
 The program uses advanced machine learning models to interpret the questions and generate responses. It offers several different models to choose from, allowing users to select the one that best suits their needs. The models range from fastest to smartest, giving users the ability to balance speed and accuracy according to their requirements.
 
-### User-Friendly Interface
+### User-Friendly Interface 💻
 
 Designed with user experience in mind, the program provides a simple and intuitive interface. Users can easily navigate through the various modes and models without needing extensive technical knowledge.
 
-### Customizable Settings
+### Customizable Settings ⚙
 
 Users have the freedom to customize settings according to their preferences. This includes choosing the preferred machine learning model and adjusting the language of the images used for analysis.
 
 
-### Open Source
+### Open Source 📂
 
 As an open-source project, the program encourages contributions from the community. Developers can contribute by reporting bugs, suggesting improvements, or even submitting their own code.
 
